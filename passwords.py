@@ -1,22 +1,18 @@
 # passrords
 
-password = 'a123456'
-a = 0
+password = 'Takotail'
+a = 3
 
-word = ( input('請輸入密碼：') )
-
-while a <= 3 :
-	a =  a + 1
-	if word != 'a123456':
-		if a == 1 :
-			print ('輸入錯誤還有兩次機會')
-			word = ( input('請輸入密碼：') )
-		elif a == 2 :
-			print ('輸入錯誤還有一次機會')
-			word = ( input('請輸入密碼：') )
-		elif a == 3 :
-			print ('輸入多次錯誤，無法再次輸入')
-
-	elif word == password :
+while a > 0 :
+	a = a - 1
+	word = ( input('請輸入密碼：') )
+	if word == password :
 		print('歡迎登入')
 		break
+	else :
+		print ('輸入錯誤還有')
+		if a > 0 :
+			print ('還有', a, '次機會')
+		else :
+			print ('輸入多次錯誤，無法再次輸入')
+
